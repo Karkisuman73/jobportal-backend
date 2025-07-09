@@ -24,8 +24,9 @@ const port = 3001;
 const server= http.createServer(app);
 const io = socketIo (server,{
   cors:{
-    origin: "http://localhost:5173",
-    methods:["GET", "POST"]
+    origin: "https://jobportal-frontend-pied.vercel.app",
+    methods:["GET", "POST"],
+    credentials: true,
   }
 })
 
