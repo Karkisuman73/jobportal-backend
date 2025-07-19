@@ -11,6 +11,7 @@ const profile = require("./routes/profile.js");
 const EmailSent = require("./routes/EmailSent.js");
 const joobseekerprofile = require("./routes/Joobseekerprofile.js");
 const SeekerProfileInfo = require("./routes/SeekerProfileInfo.js");
+const VerifyOTP = require("./routes/VerifyOTP.js")
 const path = require("path");
 const socketIo = require("socket.io");
 const http = require("http");
@@ -59,6 +60,7 @@ app.use("/", EmailSent);
 app.use("/", joobseekerprofile);
 app.use("/", profile);
 app.use("/", SeekerProfileInfo);
+app.use("/", VerifyOTP)
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 server.listen(port, () => {
